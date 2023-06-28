@@ -49,3 +49,9 @@ module "gke" {
     },
   ]
 }
+
+resource "google_project_iam_member" "gke_service_account" {
+  project = var.project_name
+  role    = "roles/artifactregistry.reader"
+  member  = "serviceAccount:${module.gke.service_account}"
+}
