@@ -1,6 +1,7 @@
 ## ✨Create your own Private Docker Repository on GCP✨
-> ---
-### Run the following commands in the Root directory of the repo
+
+`Run the following commands in the Root directory of the repo`
+
 Ensure that you have the .json file to provide auth creds to Google provider in Terraform
 ```
 terraform init
