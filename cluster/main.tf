@@ -41,11 +41,12 @@ module "gke" {
   node_pools = [
     {
       name                      = "node-pool"
-      machine_type              = "e2-medium"
+      machine_type              = "n2-standard-2" # n2-standard-4 for running ELK stack with file beat
       node_locations            = "${var.zone}"
       min_count                 = 1
       max_count                 = 1
       disk_size_gb              = 30
+      preemptible               = true
     },
   ]
 }
